@@ -10,6 +10,6 @@ public class Motorbike extends Vehicle implements Transportable, Rideable {
 
     @Override
     public int move(int pointA, int pointB) {
-        return 0;
+        return pointB - pointA;
     }
 }

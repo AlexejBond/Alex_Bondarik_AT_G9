@@ -17,4 +17,8 @@ public abstract class Vehicle extends Matter {
     public void setName(String name) {
         this.name = name;
     }
+
+    public int move(int pointA, int pointB) {
+        return pointB - pointA;
+    }
 }

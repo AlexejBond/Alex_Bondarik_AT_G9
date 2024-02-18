@@ -10,6 +10,6 @@ public class Car extends Vehicle implements Transportable, Rideable {
 
     @Override
     public int move(int pointA, int pointB) {
-        return 0;
+        return (pointA - pointB);
     }
 }
