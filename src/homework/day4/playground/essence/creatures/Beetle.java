@@ -5,7 +5,7 @@ package homework.day4.playground.essence.creatures;
 //где N - имя соответствующего обьекта класса жука, D -  целая чать от деления массы моркови на массу жука, в противном случае печатает в консоль фразу "This carrot is too small for nesting :(
 //        ", использовать, Format string syntax
 
-public class Beetle extends Insect {
+public class Beetle extends Insect implements Crawlable {
     public Beetle(int mass, String name) {
         super(mass, name);
     }
@@ -18,4 +18,10 @@ public class Beetle extends Insect {
         }
     }
 
+    @Override
+    public void crawl(String direction, int distance) {
+        System.out.printf("I am %s, my name is %s and I am crawling to %s for %d units", getClass().getSimpleName(), getName(), direction, distance).println();
+        System.out.println("vz-vz-vzz-zz..");
+
+    }
 }
