@@ -8,12 +8,12 @@ public abstract class AirVehicles extends Matter implements Flyable, Transportab
     protected String name;
 
     public AirVehicles(int mass, String name){
-        super(mass, name);
+        super(mass);
         this.name = name;
 
     }
     public AirVehicles(String name, int mass) {
-        super(mass, name);
+        super(mass);
         this.name = name;
     }
 

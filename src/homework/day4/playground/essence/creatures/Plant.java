@@ -6,7 +6,7 @@ public abstract class Plant extends Matter {
     protected String name;
 
     public Plant(int mass, String name) {
-        super(mass, name);
+        super(mass);
         this.name = name;
     }
 

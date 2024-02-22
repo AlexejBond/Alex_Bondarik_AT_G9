@@ -4,12 +4,11 @@ public abstract class Matter {
 
 
     protected int mass;
-    public String name;
 
 
-    public Matter(int mass, String name) {
+    public Matter(int mass) {
         this.mass = mass;
-        this.name = name;
+
     }
 
 
