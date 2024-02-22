@@ -1,4 +1,4 @@
-package homework.day5.generictask;
+package homework.day5.generic_task;
 
 public class GenericMethodsInGenericClassT<T> {
 

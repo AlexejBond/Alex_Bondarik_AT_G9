@@ -1,4 +1,4 @@
-package homework.day5.generictask;
+package homework.day5.generic_task;
 
 import homework.day4.playground.essence.Matter;
 import homework.day4.playground.essence.craft.air.AirVehicles;

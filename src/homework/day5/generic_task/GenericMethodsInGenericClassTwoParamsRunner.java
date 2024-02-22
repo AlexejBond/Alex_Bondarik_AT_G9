@@ -1,13 +1,9 @@
-package homework.day5.generictask;
+package homework.day5.generic_task;
 
-import homework.day4.playground.essence.craft.air.AirVehicles;
 import homework.day4.playground.essence.craft.air.Copter;
 import homework.day4.playground.essence.craft.air.Plane;
-import homework.day4.playground.essence.craft.air.Rocket;
 import homework.day4.playground.essence.craft.field.Car;
 import homework.day4.playground.essence.craft.field.Motorbike;
-import homework.day4.playground.essence.craft.field.Vehicle;
-import homework.day4.playground.essence.creatures.Fly;
 
 public class GenericMethodsInGenericClassTwoParamsRunner {
     public static void main(String[] args) {
