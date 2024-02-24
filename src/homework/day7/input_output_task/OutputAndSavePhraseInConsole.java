@@ -48,79 +48,82 @@ import java.util.Scanner;
 //    }
 //}
 //
-//public class OutputAndSavePhraseInConsole {
-//    public void saveTextInFile() {
-//        Scanner scanner = new Scanner(System.in);
-//        String savedMessage = scanner.nextLine();
-//        System.out.println("Hello, I just got " + savedMessage + " from you!");
-//        try {
-//            BufferedWriter out = new BufferedWriter(new FileWriter("OutputAndSavePhraseInConsole.txt"));
-//            out.write(savedMessage);
-//            out.close();
-//        } catch (IOException e) {
-//            System.out.println(e);
-//        }
-//
-//
-//    }
-//
-//    public static void main(String[] args) {
-//        OutputAndSavePhraseInConsole writeText = new OutputAndSavePhraseInConsole();
-//        writeText.saveTextInFile();
-//
-//
-//    }
-//}
+public class OutputAndSavePhraseInConsole {
+    public void saveTextInFile() {
+        Scanner scanner = new Scanner(System.in);
+        String savedMessage = scanner.nextLine();
+
+        System.out.println("Hello, I just got " + savedMessage + " from you!");
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter("OutputAndSavePhraseInConsole.txt"));
+            out.write(savedMessage);
+            out.close();
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
+
+    }
+
+    public static void main(String[] args) {
+        OutputAndSavePhraseInConsole writeText = new OutputAndSavePhraseInConsole();
+        System.out.print("Input text please : ");
+        writeText.saveTextInFile();
+
+
+    }
+}
 
 
 //    1. Метод для чтения ввода из консоль.
 //    2. Создание буфера и файлик.
 //    3. Метод записи в буфер.
 
-public class OutputAndSavePhraseInConsole {
+//public class OutputAndSavePhraseInConsole {
+//
+//    public String consoleReader() {
+//        Scanner scanner = new Scanner(System.in);
+//        String savedMessage = scanner.nextLine();
+//        return savedMessage;
+//    }
+//
+//    public BufferedWriter createBuffer(String fileName) {
+//        try {
+//            BufferedWriter out = new BufferedWriter(new FileWriter(fileName));
+//            return out;
+//        } catch (IOException e) {
+//            System.out.println(e);
+//        }
+//        return null;
+//    }
+//}
 
-    public String consoleReader() {
-        Scanner scanner = new Scanner(System.in);
-        String savedMessage = scanner.nextLine();
-        return savedMessage;
-    }
-
-    public BufferedWriter createBuffer(String fileName) {
-        try {
-            BufferedWriter out = new BufferedWriter(new FileWriter(fileName));
-            return out;
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-        return null;
-    }
-
-    public String modifyText (String text) {
-       return "Hello, I just got " + text + " from you!";
-    }
-
-
-    public void writeContent(BufferedWriter buffer, String content) {
-        try {
-            buffer.write(content);
-            buffer.close();
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-
-    }
-
-    public static void main(String[] args) {
-        OutputAndSavePhraseInConsole writeAndSave = new OutputAndSavePhraseInConsole();
-        System.out.print("Input text please : ");
-        String content = writeAndSave.consoleReader();
-        BufferedWriter buffer = writeAndSave.createBuffer("OutputAndSavePhraseInConsole.txt");
-        content = writeAndSave.modifyText(content);
-        writeAndSave.writeContent(buffer, content);
-        System.out.println(content);
-
-    }
-}
+//    public String modifyText (String text) {
+//       return "Hello, I just got " + text + " from you!";
+//    }
+//
+//
+//    public void writeContent(BufferedWriter buffer, String content) {
+//        try {
+//            buffer.write(content);
+//            buffer.close();
+//        } catch (IOException e) {
+//            System.out.println(e);
+//        }
+//
+//    }
+//
+//    public static void main(String[] args) {
+//        OutputAndSavePhraseInConsole writeAndSave = new OutputAndSavePhraseInConsole();
+//        System.out.print("Input text please : ");
+//        String content = writeAndSave.consoleReader();
+//        BufferedWriter buffer = writeAndSave.createBuffer("OutputAndSavePhraseInConsole.txt");
+//        content = writeAndSave.modifyText(content);
+//        writeAndSave.writeContent(buffer, content);
+//        System.out.println(content);
+//
+//    }
+//}
 
 
 

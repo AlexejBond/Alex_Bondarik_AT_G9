@@ -1,0 +1,2 @@
+The number of characters has been successfully counted ! 
+Number of characters in file: 2645
