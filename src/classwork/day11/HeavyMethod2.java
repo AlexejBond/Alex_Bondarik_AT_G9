@@ -3,13 +3,24 @@ package classwork.day11;
 import static java.lang.Math.atan;
 import static java.lang.Math.tan;
 
-public class HeavyMethod {
-    public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
-            new Thread(() -> {
-                heavyMethod();
-            }).start();
-        }
+public class HeavyMethod2 {
+    public static void main(String[] args) throws InterruptedException {
+        Thread t1 = new Thread(() -> heavyMethod());
+        Thread t2 = new Thread(() -> heavyMethod());
+        Thread t3 = new Thread(() -> {
+            try {
+                t1.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            heavyMethod();
+        });
+
+        t1.start();
+        t2.start();
+        t3.start();
+
+
 
 
     }
