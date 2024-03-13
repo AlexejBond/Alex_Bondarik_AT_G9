@@ -1,5 +1,7 @@
 package homework.day8;
 
+import java.util.Objects;
+
 public class Water {
     private String color;
     private String smell;
@@ -17,11 +19,32 @@ public class Water {
         this.color = color;
     }
 
-    private String getSmell() {
+    public String getSmell() {
         return smell;
     }
 
     private void setSmell(String smell) {
         this.smell = smell;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Water water = (Water) o;
+        return Objects.equals(color, water.color) && Objects.equals(smell, water.smell);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, smell);
+    }
+
+    @Override
+    public String toString() {
+        return "Water{" +
+                "color='" + color + '\'' +
+                ", smell='" + smell + '\'' +
+                '}';
     }
 }
