@@ -1,0 +1,36 @@
+package homework.day11;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Thread_4 {
+    public static void main(String[] args) {
+
+        List<Mouse> miceList = new ArrayList<>();
+
+        for (int m = 1; m < 38; m++) {
+            miceList.add(new Mouse(m));
+        }
+
+
+        for (int t = 0; t < 7; t++) {
+            new Thread(() -> {
+                while (!miceList.isEmpty()) {
+                    synchronized (miceList) {
+                        try {
+                            Thread.sleep(250);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        if (!miceList.isEmpty()) {
+                            Mouse mouseToRemove = miceList.remove(0);
+                            mouseToRemove.peep();
+                        }
+                    }
+                }
+
+            }).start();
+
+        }
+    }
+}
