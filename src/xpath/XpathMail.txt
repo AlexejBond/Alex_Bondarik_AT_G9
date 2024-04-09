@@ -1,0 +1,45 @@
+Logo:
+//*[@id="ph-whiteline"]/div/a/img
+//img[contains(@class, "ph-logo")]
+
+Регистрация:
+//*[@id="ph-whiteline"]/div/div[2]/a
+//a[contains(@class, "ph-project__register")]
+
+Войти справа:
+//*[@id="ph-whiteline"]/div/div[2]/button
+//button[contains(text(), "Войти")]
+
+Облако:
+//*[@id="ph-whiteline"]/div/nav/ul/li[3]/a
+//a[contains(text(), "Облако")]
+
+Почта:
+//*[@id="ph-whiteline"]/div/nav/ul/li[2]/a
+//a[contains(text(), "Почта")]
+
+Войти слева:
+//*[@id="mailbox"]/div[1]/button
+//div[@id="mailbox"]//button
+
+Создать почту:
+//*[@id="mailbox"]/div[2]/a
+//div[@id="mailbox"]//a
+
+Погода:
+//*[@id="PQHibvI"]/div/div/div[7]/div[2]/div/div/div/div[1]/div/div[1]/div/a[1]
+//a[contains(@href, "pogo") and img]
+
+Погода подробнее:
+
+//a[contains(@class, "weather__arrow")]
+
+Поиск Яндекса:
+//input[@aria-label="Запрос"]
+
+Найти:
+//button[text()="Найти"]
+
+Леди: 
+//a[text()="Леди"]
+//a[contains(@href, "lady.")]

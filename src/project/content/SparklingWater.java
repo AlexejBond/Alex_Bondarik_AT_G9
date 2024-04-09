@@ -1,20 +1,11 @@
-package project.bubbletask;
+package project.content;
 
-import java.util.Arrays;
 
-// SparklingWater:
-// наследуется от Water
-// содеждит приватные поля boolean isOpened, Bubble[] bubbles
-// содержит конструктор SparklingWater(), который вызывает внутренний метод isOpened();
-// есть публичный метод void pump(Bubble[] bubbles), который сетает массив из пузырьков в воду
-// есть публичный метод void setOpened(), который меняет состояние воды на "открытое" и запускает метод degas()
-// есть приватный метод degas(), который каждую секунду выпускает по партии пузырьков из рассчета
-//      10 + 5 * температура_воды (для засыпания на секунду используем Thread.sleep(1000);)
-// есть приватный метод void isOpened(), который пока ничего не делает
+import java.awt.*;
 
 public class SparklingWater extends Water {
     private boolean isOpened;
-    private Bubble[] bubbles;
+    private List <Bubble> bubbles;
 
     public SparklingWater(String color, String transparency, String smell, int temperature) {
         super(color, transparency, smell, temperature);
