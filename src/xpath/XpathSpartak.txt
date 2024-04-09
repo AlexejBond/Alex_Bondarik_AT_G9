@@ -1,0 +1,46 @@
+Logo
+//img[@title='Спартак']
+//div[@class='header__logo']//img
+
+Импрессо:
+//div[@class='content_menu']//a[text()='Импрессо']
+//div[@class='content_menu']//a[@href='/products/Impresso/']
+
+Информация для партнеров:
+//div[@class='content_menu']//span[text()='Информация для партнеров']
+//div[@class='content_menu']//ul[@class='menu full']/li[3]//span
+
+Поиск:
+//div[@class='header__search']
+//div[@class='lang-block']/div[1]
+
+Eye:
+//span[@class='header__eye']
+//div[@class='lang-block']/span
+
+Ru:
+//div[@class='header__lang']/a[1]
+//a[text()='Ru']
+
+Ch:
+//a[text()='Ch']
+//a[@href='/cn/']
+
+Скачать каталог:
+//a[text()='Скачать каталог']
+//a[@class='download-catalog']
+
+Навигация, право:
+//a[@class='flex-next']
+//ul[@class='flex-direction-nav']/li[2]/a
+
+Карусель навигации:
+//ol[@class='flex-control-nav flex-control-paging']/li[2]/a
+//ol//a[text()='2']
+
+vk:
+//div[@class='top_slider_wrapp']//img[@src='/bitrix/templates/our_shop/images/VK.svg']
+//div[@class='top_slider_wrapp']/ul/li[3]//img
+
+youtube :
+//div[@class='top_slider_wrapp']/ul/li[last()]//img
